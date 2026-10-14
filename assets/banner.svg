@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="100%" height="360" fill="none">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0d1527"/>
+      <stop offset="100%" stop-color="#141a33"/>
+    </linearGradient>
+
+    <radialGradient id="glowPulse1" cx="25%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="glowPulse2" cx="80%" cy="70%" r="55%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Text Gradients -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="50%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+
+    <!-- Flow line gradients -->
+    <linearGradient id="flowGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.1"/>
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.1"/>
+    </linearGradient>
+
+    <!-- Drop Shadows -->
+    <filter id="shadowFilter" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+
+    <filter id="glowFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes flowOffset {
+      0% { stroke-dashoffset: 240; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes floatParticle {
+      0%, 100% { transform: translateY(0px) scale(1); opacity: 0.6; }
+      50% { transform: translateY(-12px) scale(1.15); opacity: 0.95; }
+    }
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.35; transform: scale(1); }
+      50% { opacity: 0.65; transform: scale(1.08); }
+    }
+    @keyframes subtleRotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .flow-line {
+      stroke-dasharray: 12, 12;
+      animation: flowOffset 14s linear infinite;
+    }
+    .flow-line-reverse {
+      stroke-dasharray: 16, 16;
+      animation: flowOffset 20s linear infinite reverse;
+    }
+    .currency-node-1 { animation: floatParticle 5s ease-in-out infinite; }
+    .currency-node-2 { animation: floatParticle 6.5s ease-in-out infinite 1s; }
+    .currency-node-3 { animation: floatParticle 5.8s ease-in-out infinite 2s; }
+    .currency-node-4 { animation: floatParticle 7s ease-in-out infinite 1.5s; }
+    .currency-node-5 { animation: floatParticle 6s ease-in-out infinite 0.5s; }
+    .backdrop-glow { animation: pulseGlow 8s ease-in-out infinite alternate; transform-origin: center; }
+  </style>
+
+  <!-- Background Canvas -->
+  <rect width="1000" height="360" rx="16" fill="url(#bgGrad)"/>
+  <rect width="1000" height="360" rx="16" stroke="#25324d" stroke-width="1.5" fill="none"/>
+
+  <!-- Glowing Ambiance in Background -->
+  <circle cx="280" cy="110" r="220" fill="url(#glowPulse1)" class="backdrop-glow"/>
+  <circle cx="780" cy="240" r="240" fill="url(#glowPulse2)" class="backdrop-glow"/>
+
+  <!-- Subtle Financial Grid -->
+  <g opacity="0.12" stroke="#60a5fa" stroke-width="0.8">
+    <line x1="50" y1="0" x2="50" y2="360"/>
+    <line x1="150" y1="0" x2="150" y2="360"/>
+    <line x1="250" y1="0" x2="250" y2="360"/>
+    <line x1="350" y1="0" x2="350" y2="360"/>
+    <line x1="450" y1="0" x2="450" y2="360"/>
+    <line x1="550" y1="0" x2="550" y2="360"/>
+    <line x1="650" y1="0" x2="650" y2="360"/>
+    <line x1="750" y1="0" x2="750" y2="360"/>
+    <line x1="850" y1="0" x2="850" y2="360"/>
+    <line x1="950" y1="0" x2="950" y2="360"/>
+    <line x1="0" y1="60" x2="1000" y2="60"/>
+    <line x1="0" y1="120" x2="1000" y2="120"/>
+    <line x1="0" y1="180" x2="1000" y2="180"/>
+    <line x1="0" y1="240" x2="1000" y2="240"/>
+    <line x1="0" y1="300" x2="1000" y2="300"/>
+  </g>
+
+  <!-- Dynamic Animated Currency Network Vectors -->
+  <g>
+    <path d="M 60 70 Q 250 20 480 85 T 940 90" fill="none" stroke="url(#flowGrad1)" stroke-width="2.2" class="flow-line"/>
+    <path d="M 70 290 Q 320 340 550 280 T 930 260" fill="none" stroke="url(#flowGrad1)" stroke-width="2" class="flow-line-reverse"/>
+    <path d="M 120 180 C 260 90, 360 260, 500 170 C 640 80, 780 230, 910 160" fill="none" stroke="#6366f1" stroke-width="1.2" stroke-opacity="0.35" stroke-dasharray="6,8"/>
+  </g>
+
+  <!-- Dynamic Floating Currency Nodes (Background/Midground) -->
+  <g class="currency-node-1" transform="translate(90, 80)">
+    <circle cx="0" cy="0" r="22" fill="#1e293b" stroke="#38bdf8" stroke-width="1.8" filter="url(#glowFilter)"/>
+    <text x="0" y="7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="19" font-weight="bold" fill="#38bdf8" text-anchor="middle">$</text>
+  </g>
+
+  <g class="currency-node-2" transform="translate(890, 75)">
+    <circle cx="0" cy="0" r="22" fill="#1e293b" stroke="#a78bfa" stroke-width="1.8" filter="url(#glowFilter)"/>
+    <text x="0" y="7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="19" font-weight="bold" fill="#a78bfa" text-anchor="middle">€</text>
+  </g>
+
+  <g class="currency-node-3" transform="translate(130, 275)">
+    <circle cx="0" cy="0" r="20" fill="#1e293b" stroke="#f472b6" stroke-width="1.8" filter="url(#glowFilter)"/>
+    <text x="0" y="6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="bold" fill="#f472b6" text-anchor="middle">£</text>
+  </g>
+
+  <g class="currency-node-4" transform="translate(870, 275)">
+    <circle cx="0" cy="0" r="20" fill="#1e293b" stroke="#34d399" stroke-width="1.8" filter="url(#glowFilter)"/>
+    <text x="0" y="6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="bold" fill="#34d399" text-anchor="middle">¥</text>
+  </g>
+
+  <g class="currency-node-5" transform="translate(500, 45)">
+    <circle cx="0" cy="0" r="17" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5" filter="url(#glowFilter)"/>
+    <text x="0" y="5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#fbbf24" text-anchor="middle">₿</text>
+  </g>
+
+  <!-- FOREGROUND: Crisp Typography & Badges (Guaranteed Visibility) -->
+  <g filter="url(#shadowFilter)">
+    <!-- Category Pill Badge -->
+    <g transform="translate(500, 105)">
+      <rect x="-160" y="-16" width="320" height="32" rx="16" fill="#1e1e38" stroke="#6366f1" stroke-width="1.2"/>
+      <text x="0" y="5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="700" fill="#c7d2fe" text-anchor="middle" letter-spacing="1.5">⚡ AUTONOMOUS FINANCIAL CLOSE &amp; LEDGERS</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="500" y="170" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif" font-size="34" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="-0.5">
+      Awesome Multi-Currency
+    </text>
+    <text x="500" y="215" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif" font-size="34" font-weight="900" fill="url(#titleGrad)" text-anchor="middle" letter-spacing="-0.5">
+      Autonomous Bookkeeping
+    </text>
+
+    <!-- Subtitle -->
+    <text x="500" y="254" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15.5" font-weight="400" fill="#94a3b8" text-anchor="middle">
+      Curated AI Reconciliation Engines, Multi-Entity Ledgers &amp; Autonomous Close Platforms
+    </text>
+  </g>
+
+  <!-- Feature Tags / Pills at Bottom -->
+  <g transform="translate(500, 305)">
+    <!-- Pill 1 -->
+    <g transform="translate(-330, 0)">
+      <rect x="-80" y="-14" width="160" height="28" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+      <text x="0" y="4.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#38bdf8" text-anchor="middle">🤖 AI GL Matching</text>
+    </g>
+    <!-- Pill 2 -->
+    <g transform="translate(-110, 0)">
+      <rect x="-85" y="-14" width="170" height="28" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+      <text x="0" y="4.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#a78bfa" text-anchor="middle">💱 Multi-Currency FX</text>
+    </g>
+    <!-- Pill 3 -->
+    <g transform="translate(110, 0)">
+      <rect x="-85" y="-14" width="170" height="28" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+      <text x="0" y="4.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#34d399" text-anchor="middle">⚡ Continuous Close</text>
+    </g>
+    <!-- Pill 4 -->
+    <g transform="translate(330, 0)">
+      <rect x="-85" y="-14" width="170" height="28" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+      <text x="0" y="4.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#fbbf24" text-anchor="middle">🔍 Bank Reconciliation</text>
+    </g>
+  </g>
+</svg>

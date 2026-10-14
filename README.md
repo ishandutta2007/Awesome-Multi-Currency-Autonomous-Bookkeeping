@@ -1,113 +1,239 @@
-# Awesome-Multi-Currency-Autonomous-Bookkeeping
+<p align="center">
+  <img src="./assets/banner.svg" alt="Awesome Multi-Currency Autonomous Bookkeeping Banner" width="100%" />
+</p>
 
-# Awesome-Multi-Currency-Autonomous-Bookkeeping
-
-## Top Multi-Currency Autonomous Bookkeeping Ecosystem
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-*Focused on Multi-Currency Reconciliation, AI-Powered Transaction Matching & Autonomous Financial Close*  
-**Last updated: March 2026**
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Multi-Currency Autonomous Bookkeeping**. These tools use AI to match bank ledger entries with operational receipts, invoices, and payment records across currencies — automating reconciliation, categorization, and month-end close without manual data entry.
-
-**Examples** include Numeric, Rillet, Digits, Vic.ai, Puzzle, Truewind, Docyt, Booke AI, Campfire, and Osfin AI (the category leaders).
-
-**Open-source emphasis**: This section is expanded with every major active project for self-hosting, custom reconciliation engines, and transparent multi-currency accounting — ideal for finance teams prioritizing data sovereignty, developers building bookkeeping pipelines, and organizations avoiding per-transaction SaaS pricing.
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-## Table of Contents
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-- [Open-Source GitHub Projects](#open-source-github-projects)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer](#disclaimer)
-
-## SaaS/Hosted Platforms
-
-- **[Numeric](https://www.numeric.io/)**  
-  AI-powered accounting close platform that centralizes the entire close process, monitors financial data, detects anomalies, and tracks task completion. Best for accounting teams and controllers managing complex monthly and quarterly closes. Custom enterprise pricing, no free plan .
-
-- **[Rillet](https://www.rillet.com/)**  
-  Revenue recognition and financial close automation built specifically for SaaS companies. Connects directly to Stripe and billing systems to continuously update revenue schedules aligned with ASC 606 and IFRS 15. Custom pricing .
-
-- **[Digits](https://digits.com/)**  
-  AI financial insights for small businesses with automated transaction analysis, real-time dashboards, and plain-English explanations of business performance. Offers a free plan for basic usage, with paid tiers for advanced reporting .
-
-- **[Vic.ai](https://www.vic.ai/)**  
-  AI-driven invoice processing and predictive GL coding for enterprise AP teams. Features duplicate invoice detection, automated approval workflows, and real-time AP analytics. Custom enterprise pricing based on invoice volume .
-
-- **[Puzzle](https://puzzle.io/)**  
-  AI-native accounting software designed for startups and accounting firms. Real-time reconciliation, automated month-end close, and daily financial insights. **No public free plan** .
-
-- **[Truewind](https://www.truewind.ai/)**  
-  Combines AI-powered bookkeeping with professional accountant review for venture-backed startups. Automates transaction categorization, reconciliations, and month-end close with human oversight. Custom pricing .
-
-- **[Docyt](https://docyt.com/)**  
-  AI-powered bookkeeping automation for multi-location businesses and franchises, with document collection and reconciliation.
-
-- **[Booke AI](https://www.booke.ai/)**  
-  AI-powered bookkeeping automation for QuickBooks and Xero. Uses AI and RPA to reduce manual work by 80% through automated reconciliation, smart document processing, and proactive error detection. Paid plans from $20 .
-
-- **[Campfire](https://campfire.ai/)**  
-  AI-powered accounting platform with autonomous bookkeeping and real-time financial close for startups.
-
-- **[Osfin AI](https://www.osfin.ai/)**  
-  Financial operations platform automating transaction categorization, bank reconciliation, AP/AR management, and financial close. Handles high-volume transaction environments with real-time dashboards. Targets growth-stage and established companies .
-
-## Open-Source GitHub Projects
-
-- **[MA3 Reconciliation Engine](https://www.npmjs.com/package/@idriszade/ma3-reconciliation-engine)**  
-  **Cross-source record matching for any structured data** — bank vs ledger, PO vs receipt vs invoice, billing vs accounting. Returns matched records, discrepancies, and unmatched items with LLM-generated explanations. **Matching is 100% pure computation with no LLM involvement** — the LLM fires only when exceptions exist. Supports exact or fuzzy matching with amount and date tolerances. Includes multi-currency wire matching by key and batch payment splitting scenarios. 19+ tests covering payroll GL discrepancies, timezone tolerance, and month-end 50-transaction perfect close .
-
-- **[reconcile-py](https://pypi.org/project/reconcile-py/0.1.0/)**  
-  **Deterministic Python library for bank-to-ledger reconciliation.** Pure and deterministic — no wall-clock time, no randomness. Shuffling input order produces byte-identical results. Features `FieldRule` for gate and graded matching criteria (amount gates with absolute or percentage tolerance, date gates with day windows, reference and counterparty similarity grading). Returns matches with `Reason` objects (which gates passed, each graded similarity) for full explainability. Pandas adapter handles dtype quirks including NaN/NaT normalization and exact decimal conversion .
-
-- **[Reckon](https://github.com/cantino/reckon)**  
-  **Flexibly import bank account CSV files into Ledger** for command-line accounting. Uses **Bayesian machine learning** to select the correct accounts associated with CSV data. Supports unattended mode with `--learn-from` an existing ledger file or `--account-tokens` YAML for keyword-based account assignment. Handles multiple currencies via `-c` currency symbol flag. Ruby gem, installable via `gem install reckon` .
-
-- **[Firefly III](https://github.com/firefly-iii/firefly-iii)**  
-  **Self-hosted personal finance manager with powerful rule engine.** Rule triggers include transaction type, reconciliation status, attachments, categories, budgets, tags, amount (with foreign amount and currency filters), source/destination account (ID, name, IBAN, number), and date/time. All triggers can be inverted with the "NOT" option. Amount triggers handle bigger than, less than, exactly. Foreign currency triggers available for multi-currency transactions . AGPL-3.0 licensed.
-
-- **[GnuCash](https://github.com/Gnucash/gnucash)**  
-  **Free, open-source double-entry accounting for personal and small business use.** Full **multiple currency support** — track bank accounts, investments, and financial data in different currencies with real-time exchange rates . Statement reconciliation via QIF import and "druid" wizard. Production-stable since 1999, available for Linux, Windows, and macOS. GPL licensed .
-
-- **[ERPNext](https://github.com/frappe/erpnext)**  
-  **Full open-source ERP with bookkeeping and multi-currency out of the box.** Bank reconciliation to clear bank data entry discrepancies. Handles multiple currencies natively — no ad-hoc conversions needed . Python/Frappe framework, GPL-3.0 licensed.
-
-- **[LedgerSMB](https://github.com/ledgersmb/LedgerSMB)**  
-  **Free double-entry accounting and ERP system** for small and medium businesses. Production-stable since 2006. PostgreSQL backend with multilingual support . GPL-2.0 licensed.
-
-- **[Beancount + Fava](https://github.com/beancount/beancount)**  
-  **Plain-text double-entry accounting with powerful visualization.** Beancount processes plain-text ledger files; Fava provides web-based dashboards with treemaps, net worth tracking, and monthly comparison charts . Supports multi-currency ledgers with automatic balance assertions. Can be automated via cron jobs fetching bank APIs and appending transactions — enabling near-real-time financial visibility while maintaining full control and transparency .
-
-- **[Transity](https://github.com/ad-si/Transity)**  
-  **Plain text accounting with YAML journal files and AI-powered import.** Built-in OpenAI GPT converts any financial data (CSVs, bank statements, chat history) to Transity journal format . Ledger CLI import script included. Focus on physical accounts and tags rather than abstract ledger accounts.
-
-### Additional Strong Open-Source Options
-
-- **Bizuno Accounting** — Full ERP/accounting/CRM for WordPress. Trusted evolution of PhreeBooks since 2007. Self-hosted, no subscriptions. Multi-warehouse and multi-business support from one instance. US tax calc via API, shipping integrations with USPS, FedEx, UPS .
-- **FrontAccounting** — Web-based open-source accounting solution with basic ERP functionality. GPL licensed .
-- **TurboCASH** — Open-source accounting management program. GPL licensed .
-- **HomeBank** — Personal accounting management software. GPL licensed .
-
-**Frameworks for building custom systems**: Combine **MA3** for cross-source matching with pure computation and LLM exception handling, **reconcile-py** for deterministic bank-to-ledger reconciliation with full explainability, **Reckon** for Bayesian account assignment from bank CSVs, **Beancount + Fava** for plain-text multi-currency ledgers with real-time dashboards, and **Firefly III** or **GnuCash** for self-hosted double-entry accounting to build a complete open-source multi-currency bookkeeping stack.
-
-## How to Contribute
-
-1. Fork the repo.
-2. Add/edit entries in `README.md` (follow existing format).
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-4. Submit PR with a short explanation.
-
-Star the repo if you find it useful!
-
-## Disclaimer
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-- Multi-currency bookkeeping tools must comply with local accounting standards (GAAP, IFRS), tax regulations, and data protection laws. **AI-categorized transactions and automated reconciliations must be reviewed by qualified accountants before finalizing books** — errors in multi-currency conversions, FX gain/loss treatment, and intercompany eliminations can have material financial reporting consequences.
-- Self-hosted open-source solutions require proper security hardening, backup strategies, and accounting domain expertise for configuration.
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awssome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
+  <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="License: MIT" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Multi-Currency-Autonomous-Bookkeeping/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Multi-Currency-Autonomous-Bookkeeping?style=flat-square&color=gold" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Multi-Currency-Autonomous-Bookkeeping/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Multi-Currency-Autonomous-Bookkeeping?style=flat-square&color=blue" alt="GitHub Forks" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Multi-Currency-Autonomous-Bookkeeping/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
 ---
 
-**Made for controllers, finance teams, accounting firms, and developers building autonomous bookkeeping platforms.**  
-Let's make multi-currency autonomous bookkeeping more open, accurate, and finance-team friendly.
+# 🌐 Awesome Multi-Currency Autonomous Bookkeeping
+
+> 🚀 **A curated directory of next-generation SaaS platforms, open-source accounting engines, and deterministic reconciliation algorithms for multi-currency autonomous bookkeeping and continuous financial close.**
+
+Modern global enterprises, high-growth venture-backed startups, and fintech operations manage revenue, payroll, and vendor disbursements across dozens of fiat and digital currencies. **Autonomous Bookkeeping** represents the convergence of machine learning, robotic process automation (RPA), deterministic ledger logic, and real-time bank feeds. These platforms automate transaction matching, foreign exchange (FX) gain/loss computation, intercompany reconciliations, and balance sheet close without manual spreadsheet intervention.
+
+Whether you are looking for enterprise AI close management or building self-hosted sovereign financial infrastructure, this directory indexes the category leaders and battle-tested open-source alternatives.
+
+---
+
+## 📑 Table of Contents
+
+- [📊 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [🏢 SaaS & Hosted Autonomous Bookkeeping Platforms](#-saas--hosted-autonomous-bookkeeping-platforms)
+- [💻 Open-Source Bookkeeping & Financial Close Ecosystem](#-open-source-bookkeeping--financial-close-ecosystem)
+- [🔬 Deterministic Matching Engines & Standalone Libraries](#-deterministic-matching-engines--standalone-libraries)
+- [🏛️ Architectural Blueprint: Building a Sovereign Stack](#️-architectural-blueprint-building-a-sovereign-stack)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [⚖️ Accounting & Regulatory Disclaimer](#️-accounting--regulatory-disclaimer)
+- [📈 Star History](#-star-history)
+- [💖 Support & Community](#-support--community)
+
+---
+
+## 📊 Sector Overview & Market Dynamics
+
+The global **AI in Accounting & Autonomous Finance** market is experiencing exponential growth, valued at approximately **$7.0B to $11.0B in 2025–2026** and projected to surge past **$68.0B to $96.0B by 2031–2033**, compounding at an aggressive **CAGR of 35% to 45%** (source: *Grand View Research, Mordor Intelligence, Fortune Business Insights*). 
+
+Unlike traditional office productivity software, this sector is **moderately to highly fragmented** rather than a winner-take-all landscape. The fragmentation is structurally sustained by:
+1. **Jurisdictional & Regulatory Diversity**: Variations in tax codes (US GAAP, IFRS, EU VAT, statutory e-invoicing mandates like Peppol) necessitate regionalized compliance logic.
+2. **ERP Ecosystem Locks**: Specialized subledger tools integrate selectively into NetSuite, SAP, Sage Intacct, or QuickBooks Online.
+3. **Scale & Architectural Segmentation**: High-frequency fintechs requiring real-time transaction reconciliation have fundamentally different architectural demands than early-stage SaaS firms seeking automated ASC 606 revenue recognition or distributed enterprises requiring multi-entity FX consolidations.
+
+---
+
+## 🏢 SaaS & Hosted Autonomous Bookkeeping Platforms
+
+The following hosted platforms leverage AI, machine learning, and deep general ledger integrations to automate multi-currency transaction matching, subledger reconciliations, and continuous accounting close.
+
+*The table below is sorted descending by **Company Size (Valuation / Total Capital Raised)**.*
+
+| Platform | Company Size (Valuation / Funding) 🏢 | Starting Price 💵 | Free Tier / Trial Limits ⏱️ | Core Multi-Currency & Automation Capabilities ⚡ |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Rillet](https://www.rillet.com/)** | **$1.0B Valuation** (Unicorn)<br>*(~$200M+ Raised, ICONIQ/a16z/Sequoia)* | **~$2,333/mo**<br>*(~$28,000/yr median contract; custom tier based on transaction volume; unlimited seats)* | **No free plan**<br>*(Guided enterprise POC / sandbox demo available upon sales qualification)* | AI-native revenue recognition (ASC 606 & IFRS 15), automated Stripe/billing ledger sync, automated multi-currency FX revaluations, and continuous real-time close. |
+| **[Digits](https://digits.com/)** | **$565M Valuation**<br>*(~$98M Raised, SoftBank/GV/Benchmark)* | **$65/mo**<br>*("Essentials" plan; $100/mo for "Core", $250/mo for "Pro")* | **30-Day Free Trial**<br>*(Full access to live P&L, balance sheet, cash flows & 12,000+ bank feeds; outcome-based free trial for CPA firms until 95%+ auto-categorization)* | Real-time autonomous general ledger with 24/7 AI bookkeeping, dimensional multi-currency reporting, and automated transaction anomaly detection. |
+| **[Vic.ai](https://www.vic.ai/)** | **~$350M–$500M Est. Valuation**<br>*(~$115M Raised, ICONIQ/GGV)* | **~$1,500/mo**<br>*(Annual contract starting at ~$18,000/yr scaled to ~500–1,000 invoices/mo)* | **No permanent free tier**<br>*(30-day guided enterprise pilot proof-of-concept upon sales approval)* | Autonomous accounts payable (AP) invoice processing, predictive 2-way and 3-way PO matching, multi-currency vendor bills, and automated approval workflows. |
+| **[Campfire](https://campfire.ai/)** | **$375M Valuation**<br>*(~$103.5M Raised, Accel/Ribbit Capital)* | **~$1,000/mo**<br>*(Entry tier starting at ~$12,000/yr tailored to ARR and multi-entity scale)* | **No public free tier**<br>*(14-day staging sandbox evaluation with pre-loaded mock ledger data post-discovery)* | AI-native modern ERP for high-growth tech companies; automated multi-currency FX conversions, autonomous subledger reconciliations, and continuous close. |
+| **[Numeric](https://www.numeric.io/)** | **~$250M–$300M Est. Valuation**<br>*(~$89M Raised, IVP/Menlo/Founders Fund)* | **~$300/mo**<br>*(Entry close tier ~$3,600/yr; scaled by entities and volume; previously $30/user/mo)* | **No permanent free tier**<br>*(14-day guided proof-of-concept trial provided during assisted onboarding)* | Centralized close management, automated balance sheet account reconciliations, multi-currency cash flux monitoring, and AI error detection. |
+| **[Puzzle](https://puzzle.io/)** | **~$150M–$200M Est. Valuation**<br>*(~$66.5M Raised, General Catalyst/Felicis)* | **$30/mo**<br>*("Starter" plan at $30/mo or $25/mo billed annually; $72/mo Core, $120/mo Complete)* | **14-Day Free Trial**<br>*(Full feature access; 2 months free promotion on Starter; Starter limited to 1 user seat and 25 lifetime AI credits)* | AI-native accounting system for startups; 98% auto-categorization, multi-currency balance assertions, instant cash/burn/runway analytics, and automated month-end close. |
+| **[Docyt](https://docyt.com/)** | **~$17.5M Total Funding**<br>*(Pre-Series B $12M, ~$5M ARR)* | **$50/mo**<br>*(Standalone module e.g. Expense/Bill Pay; $299/mo for full Impact Bookkeeping)* | **30-Day Free Trial**<br>*(Unlimited receipt capture, bill workflows, and OCR scanning; 7-day trial on advanced AI accounting modules)* | Autonomous back-office bookkeeping, multi-location and franchise GL reconciliation, real-time revenue categorization, and live financial dashboards. |
+| **[Truewind](https://www.truewind.ai/)** | **$17M Total Funding**<br>*(Series A $13M, Thomson Reuters/Rho Capital)* | **~$500/mo**<br>*(Custom monthly bookkeeping tier scaled to OPEX volume & transaction count)* | **No public free tier**<br>*(Personalized concierge onboarding demo and synthetic bank feed test environment)* | AI-driven transaction categorization, automated bank and credit card reconciliations paired with human CPA oversight, and accelerated month-end close. |
+| **[Osfin AI](https://www.osfin.ai/)** | **$9.9M Total Funding**<br>*(Series A, Peak XV Partners / Sequoia India)* | **~$500/mo**<br>*(Starting contract ~$6,000/yr for high-volume data reconciliation pipelines)* | **No permanent free tier**<br>*(30-day enterprise sandbox pilot with automated ETL pipeline configuration)* | High-volume financial operations engine; automates bank vs gateway transaction reconciliation, multi-currency payouts, payout splitting, and dispute resolution. |
+| **[Booke AI](https://www.booke.ai/)** | **$6M Valuation**<br>*(~$300K Raised, Insta Ventures/Alchemist)* | **$129/mo**<br>*(Business plan per entity; $20–$50/mo partner tiers for accounting firms)* | **No permanent free tier**<br>*(7-day free trial with AI invoice OCR processing, error detection, and QuickBooks/Xero feed sync)* | RPA and AI bookkeeping assistant for QuickBooks and Xero; automated transaction reconciliation, proactive discrepancy flagging, and OCR document processing. |
+
+---
+
+## 💻 Open-Source Bookkeeping & Financial Close Ecosystem
+
+For engineering-led finance teams, data privacy advocates, and organizations seeking full data sovereignty without per-transaction SaaS costs, these open-source projects provide complete double-entry ledgers, rule engines, and automated multi-currency engines.
+
+*The list below is sorted descending by **GitHub Star Count**.*
+
+### 1. **[ERPNext](https://github.com/frappe/erpnext)** [![GitHub stars](https://img.shields.io/github/stars/frappe/erpnext?style=social&color=white)](https://github.com/frappe/erpnext/stargazers)
+- **Primary Language**: Python / JavaScript (Frappe Framework) | **License**: GPL-3.0
+- **Capabilities**: Enterprise-grade open-source ERP with native double-entry bookkeeping, automated multi-currency accounting, and rule-based bank statement reconciliation. Includes automated FX revaluation entries, tax templates, multi-company consolidation, and payment gateway clearing.
+- **Ideal For**: Mid-market organizations, manufacturing, and global enterprises replacing proprietary tier-1 ERPs.
+
+### 2. **[Actual Budget](https://github.com/actualbudget/actual)** [![GitHub stars](https://img.shields.io/github/stars/actualbudget/actual?style=social&color=white)](https://github.com/actualbudget/actual/stargazers)
+- **Primary Language**: TypeScript / Node.js | **License**: MIT
+- **Capabilities**: Super-fast, local-first personal and small business finance system with multi-device synchronization (CRDTs), automated bank synchronization (SimpleFIN, GoCardless), custom rule-based transaction categorization, and multi-currency tracking.
+- **Ideal For**: Solopreneurs, privacy-focused individuals, and micro-businesses seeking zero-leakage financial tracking.
+
+### 3. **[Firefly III](https://github.com/firefly-iii/firefly-iii)** [![GitHub stars](https://img.shields.io/github/stars/firefly-iii/firefly-iii?style=social&color=white)](https://github.com/firefly-iii/firefly-iii/stargazers)
+- **Primary Language**: PHP (Laravel) | **License**: AGPL-3.0
+- **Capabilities**: Highly configurable self-hosted financial manager featuring an advanced rule engine with multi-trigger criteria (transaction amount, source/destination IBAN, foreign currencies, conversion rates). Includes automated recurring transactions, budget allocations, and REST API support.
+- **Ideal For**: Self-hosters, consultants, and developers building automated rule-driven bookkeeping pipelines.
+
+### 4. **[Invoice Ninja](https://github.com/invoiceninja/invoiceninja)** [![GitHub stars](https://img.shields.io/github/stars/invoiceninja/invoiceninja?style=social&color=white)](https://github.com/invoiceninja/invoiceninja/stargazers)
+- **Primary Language**: PHP (Laravel) / Flutter | **License**: Elastic License 2.0
+- **Capabilities**: Comprehensive invoicing, expense tracking, and payment processing suite supporting 50+ payment gateways and automatic multi-currency conversions. Features automatic payment reconciliation, recurring billing workflows, and mobile client apps.
+- **Ideal For**: Freelancers, digital agencies, and global e-commerce operators managing cross-border client billings.
+
+### 5. **[Akaunting](https://github.com/akaunting/akaunting)** [![GitHub stars](https://img.shields.io/github/stars/akaunting/akaunting?style=social&color=white)](https://github.com/akaunting/akaunting/stargazers)
+- **Primary Language**: PHP (Laravel) | **License**: GPL-3.0
+- **Capabilities**: Modular, free online accounting software built for small businesses. Features native multi-currency handling, bank transaction imports and reconciliation wizards, double-entry ledgers, and an extensive modular app marketplace for tax compliance.
+- **Ideal For**: SMBs and accountants needing an accessible, web-based alternative to QuickBooks Online.
+
+### 6. **[Beancount](https://github.com/beancount/beancount)** [![GitHub stars](https://img.shields.io/github/stars/beancount/beancount?style=social&color=white)](https://github.com/beancount/beancount/stargazers)
+- **Primary Language**: Python / C | **License**: GPL-2.0
+- **Capabilities**: Plain-text double-entry bookkeeping engine with strict balance assertions and automated multi-commodity/multi-currency accounting. Integrates with **[Fava](https://github.com/beancount/fava)** to deliver interactive balance sheets, income statements, and FX portfolio charts.
+- **Ideal For**: Software engineers, quantitative traders, and finance hackers automating ledger ingestion via Python and cron scripts.
+
+### 7. **[Ledger](https://github.com/ledger/ledger)** [![GitHub stars](https://img.shields.io/github/stars/ledger/ledger?style=social&color=white)](https://github.com/ledger/ledger/stargazers)
+- **Primary Language**: C++ | **License**: BSD-3-Clause
+- **Capabilities**: The pioneer of plain-text accounting (PTA). Offers ultra-fast, command-line double-entry reporting, arbitrary currency and commodity support, automated pricing history interpolation, and programmable ledger queries.
+- **Ideal For**: Command-line power users and DevOps teams embedding accounting verification into CI/CD pipelines.
+
+### 8. **[Kill Bill](https://github.com/killbill/killbill)** [![GitHub stars](https://img.shields.io/github/stars/killbill/killbill?style=social&color=white)](https://github.com/killbill/killbill/stargazers)
+- **Primary Language**: Java | **License**: Apache-2.0
+- **Capabilities**: Enterprise-grade open billing and payment orchestration platform. Manages complex multi-currency recurring billing, invoice generation, automated payment gateway reconciliation, payment routing, and financial analytics.
+- **Ideal For**: SaaS and platform businesses needing to control end-to-end subscription lifecycle and multi-currency payment reconciliation.
+
+### 9. **[Frappe Books](https://github.com/frappe/books)** [![GitHub stars](https://img.shields.io/github/stars/frappe/books?style=social&color=white)](https://github.com/frappe/books/stargazers)
+- **Primary Language**: JavaScript / Vue.js / Electron | **License**: AGPL-3.0
+- **Capabilities**: Free, privacy-first desktop double-entry bookkeeping application. Stores data locally in SQLite, handles multi-currency invoicing, tracks journal entries, and produces instantaneous P&L and balance sheet reports without internet dependencies.
+- **Ideal For**: Small businesses, consultants, and contractors seeking a modern, offline-first native accounting GUI.
+
+### 10. **[hledger](https://github.com/hledgerorg/hledger)** [![GitHub stars](https://img.shields.io/github/stars/hledgerorg/hledger?style=social&color=white)](https://github.com/hledgerorg/hledger/stargazers)
+- **Primary Language**: Haskell | **License**: GPL-3.0
+- **Capabilities**: Robust, cross-platform plain-text accounting software with comprehensive multi-currency support. Features automated CSV/OFX/QIF bank statement import rules, transaction assertions, a built-in terminal UI (`hledger-ui`), and a lightweight web dashboard (`hledger-web`).
+- **Ideal For**: Financial analysts and developers seeking deterministic ledger reconciliation with strict type-safety guarantees.
+
+### 11. **[GnuCash](https://github.com/Gnucash/gnucash)** [![GitHub stars](https://img.shields.io/github/stars/Gnucash/gnucash?style=social&color=white)](https://github.com/Gnucash/gnucash/stargazers)
+- **Primary Language**: C / C++ / Scheme | **License**: GPL-2.0+
+- **Capabilities**: Battle-tested personal and small business double-entry accounting software (maintained since 1999). Supports multi-currency tracking, real-time exchange rate retrieval via Finance::Quote, check printing, scheduled transactions, and OFX/QIF bank reconciliation wizards.
+- **Ideal For**: Non-profit organizations, family offices, and SMBs requiring rock-solid desktop accounting.
+
+### 12. **[Bigcapital](https://github.com/bigcapitalhq/bigcapital)** [![GitHub stars](https://img.shields.io/github/stars/bigcapitalhq/bigcapital?style=social&color=white)](https://github.com/bigcapitalhq/bigcapital/stargazers)
+- **Primary Language**: TypeScript / React / Node.js | **License**: AGPL-3.0
+- **Capabilities**: Modern open-source cloud accounting software built with React and Node.js. Features automated multi-currency accounting, accounts receivable/payable management, double-entry journal entries, and customizable financial statements.
+- **Ideal For**: Modern web engineering teams looking to customize their own cloud-hosted accounting portal.
+
+### 13. **[Transity](https://github.com/ad-si/Transity)** [![GitHub stars](https://img.shields.io/github/stars/ad-si/Transity?style=social&color=white)](https://github.com/ad-si/Transity/stargazers)
+- **Primary Language**: Rust / Python | **License**: MIT
+- **Capabilities**: Plain-text accounting engine utilizing structured YAML journal files. Includes an AI-powered import pipeline utilizing OpenAI GPT models to parse unstructured bank PDFs, CSVs, and transaction feeds directly into double-entry ledgers.
+- **Ideal For**: Developers experimenting with LLM-assisted transaction categorization within plain-text ledgers.
+
+### 14. **[LedgerSMB](https://github.com/ledgersmb/LedgerSMB)** [![GitHub stars](https://img.shields.io/github/stars/ledgersmb/LedgerSMB?style=social&color=white)](https://github.com/ledgersmb/LedgerSMB/stargazers)
+- **Primary Language**: Perl / SQL (PostgreSQL) | **License**: GPL-2.0
+- **Capabilities**: Scalable double-entry ERP and accounting system running on PostgreSQL. Provides native multi-currency accounting, inventory management, quotation-to-invoice workflows, and multi-branch GL management.
+- **Ideal For**: Small-to-medium manufacturing and wholesale distribution businesses requiring relational integrity.
+
+### 15. **[Reckon](https://github.com/cantino/reckon)** [![GitHub stars](https://img.shields.io/github/stars/cantino/reckon?style=social&color=white)](https://github.com/cantino/reckon/stargazers)
+- **Primary Language**: Ruby | **License**: MIT
+- **Capabilities**: Command-line utility that intelligently converts bank CSV exports into Ledger files using Bayesian machine learning. Learns from historical accounting files to auto-assign accounts, tags, and multi-currency notations (`-c`).
+- **Ideal For**: Automating bank feed imports into plain-text ledgers (Ledger, hledger, Beancount).
+
+---
+
+## 🔬 Deterministic Matching Engines & Standalone Libraries
+
+When building bespoke automated accounting backends, developers frequently separate deterministic computational matching from non-deterministic AI exception handling. The following libraries provide specialized algorithmic engines:
+
+- **[MA3 Reconciliation Engine](https://www.npmjs.com/package/@idriszade/ma3-reconciliation-engine)** *(npm)*  
+  High-throughput record matching library for heterogeneous financial data (bank vs. ledger, PO vs. receipt vs. invoice). **100% pure deterministic computation** for matching with tolerance windows on amounts and dates; LLM agents fire solely on unresolved discrepancies. Includes multi-currency wire key matching and batch payment splitting.
+- **[reconcile-py](https://pypi.org/project/reconcile-py/)** *(PyPI)*  
+  Deterministic Python library for bank-to-ledger reconciliation. Shuffling row input order produces byte-identical match outputs. Features configurable `FieldRule` gates (absolute/percentage tolerances, day windows) and outputs detailed `Reason` objects explaining match criteria for statutory audits.
+
+---
+
+## 🏛️ Architectural Blueprint: Building a Sovereign Stack
+
+You can combine modular open-source components into a self-hosted, enterprise-ready autonomous bookkeeping pipeline:
+
+```
+[ Bank Feeds / Stripe / Plaid API ] 
+                │
+                ▼
+  [ Ingestion & Normalization ] ────► (reconcile-py / MA3 Engine)
+                │                               │
+                ▼                               ▼
+ [ Bayesian Auto-Categorization ]     [ Deterministic 3-Way Match ]
+      (Reckon / Transity AI)                    │
+                │                               ▼
+                ▼                      [ Exception Handler ]
+    [ Double-Entry Ledger ]              (LLM / CPA Review)
+ (Beancount / ERPNext / Ledger)
+                │
+                ▼
+ [ Real-Time BI & Dashboards ]
+    (Fava / Metabase / Apache Superset)
+```
+
+1. **Ingest & Normalize**: Extract bank feeds, credit card statements, and payment processor logs into standardized transaction streams.
+2. **Deterministic Pre-Match**: Run matching engines (`reconcile-py` or `MA3`) with strict amount and date tolerance gates to achieve 90%+ zero-touch reconciliation.
+3. **AI Exception Handling**: Route unmatched edge cases (currency exchange variance, bank fee deductions, batch payment discrepancies) to an LLM agent with human-in-the-loop CPA review.
+4. **General Ledger Write**: Post balanced double-entry transactions with automated FX gain/loss entries into `Beancount`, `ERPNext`, or `Ledger`.
+5. **Continuous Reporting**: Visualize multi-currency cash flux, runway, and balance sheets in real time using `Fava` or `Metabase`.
+
+---
+
+## 🤝 How to Contribute
+
+Contributions from finance teams, CPAs, and open-source developers are welcome!
+
+1. Fork this repository: `https://github.com/ishandutta2007/Awesome-Multi-Currency-Autonomous-Bookkeeping`
+2. Create a feature branch: `git checkout -b feat/add-new-tool`
+3. Add your tool to `README.md` following the established format:
+   - For SaaS: Include name, company size, starting price, exact free trial terms, and multi-currency capabilities.
+   - For Open-Source: Include GitHub star badge (`style=social&color=white`), license, languages, and technical description.
+4. Submit a Pull Request with a clear summary of why the tool qualifies.
+
+---
+
+## ⚖️ Accounting & Regulatory Disclaimer
+
+- This repository is a community-curated educational index and does not constitute financial, investment, or legal accounting advice.
+- Multi-currency bookkeeping systems must comply with statutory frameworks (such as **US GAAP ASC 830 / Foreign Currency Matters** and **IFRS IAS 21 / The Effects of Changes in Foreign Exchange Rates**).
+- **Automated AI categorization and reconciliation outputs must be reviewed and audited by qualified financial professionals** before finalizing month-end or fiscal-year statutory closes.
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Multi-Currency-Autonomous-Bookkeeping&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Multi-Currency-Autonomous-Bookkeeping&type=date&legend=top-left)
+
+---
+
+## 💖 Support & Community
+
+If you find this curated directory useful for your accounting workflows, financial technology stack, or engineering research, please consider showing your support:
+
+- ⭐ **Star this repository** to help other engineers and controllers discover it.
+- 🍴 **Fork the repo** and contribute additions or updates.
+- 📢 **Share it** on LinkedIn, X/Twitter, and financial developer communities.
+- ☕ **Sponsor the Maintainer**: Support ongoing curation, verification, and maintenance via the **[GitHub Sponsor Dashboard](https://github.com/sponsors/ishandutta2007)**.
+
+---
+
+<p align="center">
+  <sub>Maintained with ❤️ for controllers, CFOs, and developers building autonomous financial platforms.</sub><br>
+  <sub>Discover more curated resources at <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome">Awesome-Awesome-Awesome</a>.</sub>
+</p>
