@@ -6,7 +6,7 @@
   <a href="https://github.com/ishandutta2007/Awesome-Awssome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="License: MIT" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Multi-Currency-Autonomous-Bookkeeping/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Multi-Currency-Autonomous-Bookkeeping?style=flat-square&color=gold" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Multi-Currency-Autonomous-Bookkeeping/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Multi-Currency-Autonomous-Bookkeeping?style=flat-square&color=gold" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Multi-Currency-Autonomous-Bookkeeping/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Multi-Currency-Autonomous-Bookkeeping?style=flat-square&color=blue" alt="GitHub Forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Multi-Currency-Autonomous-Bookkeeping/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
@@ -74,79 +74,79 @@ The following hosted platforms leverage AI, machine learning, and deep general l
 
 For engineering-led finance teams, data privacy advocates, and organizations seeking full data sovereignty without per-transaction SaaS costs, these open-source projects provide complete double-entry ledgers, rule engines, and automated multi-currency engines.
 
-*The list below is sorted descending by **GitHub Star Count**.*
+*The list below is sorted descending by **GitHub Stars_Count**.*
 
-### 1. **[ERPNext](https://github.com/frappe/erpnext)** [![GitHub stars](https://img.shields.io/github/stars/frappe/erpnext?style=social&color=white)](https://github.com/frappe/erpnext/stargazers)
+### 1. **[ERPNext](https://github.com/frappe/erpnext)** [![GitHub_Stars](https://img.shields.io/github/stars/frappe/erpnext?style=social&color=white)](https://github.com/frappe/erpnext/stargazers)
 - **Primary Language**: Python / JavaScript (Frappe Framework) | **License**: GPL-3.0
 - **Capabilities**: Enterprise-grade open-source ERP with native double-entry bookkeeping, automated multi-currency accounting, and rule-based bank statement reconciliation. Includes automated FX revaluation entries, tax templates, multi-company consolidation, and payment gateway clearing.
 - **Ideal For**: Mid-market organizations, manufacturing, and global enterprises replacing proprietary tier-1 ERPs.
 
-### 2. **[Actual Budget](https://github.com/actualbudget/actual)** [![GitHub stars](https://img.shields.io/github/stars/actualbudget/actual?style=social&color=white)](https://github.com/actualbudget/actual/stargazers)
+### 2. **[Actual Budget](https://github.com/actualbudget/actual)** [![GitHub_Stars](https://img.shields.io/github/stars/actualbudget/actual?style=social&color=white)](https://github.com/actualbudget/actual/stargazers)
 - **Primary Language**: TypeScript / Node.js | **License**: MIT
 - **Capabilities**: Super-fast, local-first personal and small business finance system with multi-device synchronization (CRDTs), automated bank synchronization (SimpleFIN, GoCardless), custom rule-based transaction categorization, and multi-currency tracking.
 - **Ideal For**: Solopreneurs, privacy-focused individuals, and micro-businesses seeking zero-leakage financial tracking.
 
-### 3. **[Firefly III](https://github.com/firefly-iii/firefly-iii)** [![GitHub stars](https://img.shields.io/github/stars/firefly-iii/firefly-iii?style=social&color=white)](https://github.com/firefly-iii/firefly-iii/stargazers)
+### 3. **[Firefly III](https://github.com/firefly-iii/firefly-iii)** [![GitHub_Stars](https://img.shields.io/github/stars/firefly-iii/firefly-iii?style=social&color=white)](https://github.com/firefly-iii/firefly-iii/stargazers)
 - **Primary Language**: PHP (Laravel) | **License**: AGPL-3.0
 - **Capabilities**: Highly configurable self-hosted financial manager featuring an advanced rule engine with multi-trigger criteria (transaction amount, source/destination IBAN, foreign currencies, conversion rates). Includes automated recurring transactions, budget allocations, and REST API support.
 - **Ideal For**: Self-hosters, consultants, and developers building automated rule-driven bookkeeping pipelines.
 
-### 4. **[Invoice Ninja](https://github.com/invoiceninja/invoiceninja)** [![GitHub stars](https://img.shields.io/github/stars/invoiceninja/invoiceninja?style=social&color=white)](https://github.com/invoiceninja/invoiceninja/stargazers)
+### 4. **[Invoice Ninja](https://github.com/invoiceninja/invoiceninja)** [![GitHub_Stars](https://img.shields.io/github/stars/invoiceninja/invoiceninja?style=social&color=white)](https://github.com/invoiceninja/invoiceninja/stargazers)
 - **Primary Language**: PHP (Laravel) / Flutter | **License**: Elastic License 2.0
 - **Capabilities**: Comprehensive invoicing, expense tracking, and payment processing suite supporting 50+ payment gateways and automatic multi-currency conversions. Features automatic payment reconciliation, recurring billing workflows, and mobile client apps.
 - **Ideal For**: Freelancers, digital agencies, and global e-commerce operators managing cross-border client billings.
 
-### 5. **[Akaunting](https://github.com/akaunting/akaunting)** [![GitHub stars](https://img.shields.io/github/stars/akaunting/akaunting?style=social&color=white)](https://github.com/akaunting/akaunting/stargazers)
+### 5. **[Akaunting](https://github.com/akaunting/akaunting)** [![GitHub_Stars](https://img.shields.io/github/stars/akaunting/akaunting?style=social&color=white)](https://github.com/akaunting/akaunting/stargazers)
 - **Primary Language**: PHP (Laravel) | **License**: GPL-3.0
 - **Capabilities**: Modular, free online accounting software built for small businesses. Features native multi-currency handling, bank transaction imports and reconciliation wizards, double-entry ledgers, and an extensive modular app marketplace for tax compliance.
 - **Ideal For**: SMBs and accountants needing an accessible, web-based alternative to QuickBooks Online.
 
-### 6. **[Beancount](https://github.com/beancount/beancount)** [![GitHub stars](https://img.shields.io/github/stars/beancount/beancount?style=social&color=white)](https://github.com/beancount/beancount/stargazers)
+### 6. **[Beancount](https://github.com/beancount/beancount)** [![GitHub_Stars](https://img.shields.io/github/stars/beancount/beancount?style=social&color=white)](https://github.com/beancount/beancount/stargazers)
 - **Primary Language**: Python / C | **License**: GPL-2.0
 - **Capabilities**: Plain-text double-entry bookkeeping engine with strict balance assertions and automated multi-commodity/multi-currency accounting. Integrates with **[Fava](https://github.com/beancount/fava)** to deliver interactive balance sheets, income statements, and FX portfolio charts.
 - **Ideal For**: Software engineers, quantitative traders, and finance hackers automating ledger ingestion via Python and cron scripts.
 
-### 7. **[Ledger](https://github.com/ledger/ledger)** [![GitHub stars](https://img.shields.io/github/stars/ledger/ledger?style=social&color=white)](https://github.com/ledger/ledger/stargazers)
+### 7. **[Ledger](https://github.com/ledger/ledger)** [![GitHub_Stars](https://img.shields.io/github/stars/ledger/ledger?style=social&color=white)](https://github.com/ledger/ledger/stargazers)
 - **Primary Language**: C++ | **License**: BSD-3-Clause
 - **Capabilities**: The pioneer of plain-text accounting (PTA). Offers ultra-fast, command-line double-entry reporting, arbitrary currency and commodity support, automated pricing history interpolation, and programmable ledger queries.
 - **Ideal For**: Command-line power users and DevOps teams embedding accounting verification into CI/CD pipelines.
 
-### 8. **[Kill Bill](https://github.com/killbill/killbill)** [![GitHub stars](https://img.shields.io/github/stars/killbill/killbill?style=social&color=white)](https://github.com/killbill/killbill/stargazers)
+### 8. **[Kill Bill](https://github.com/killbill/killbill)** [![GitHub_Stars](https://img.shields.io/github/stars/killbill/killbill?style=social&color=white)](https://github.com/killbill/killbill/stargazers)
 - **Primary Language**: Java | **License**: Apache-2.0
 - **Capabilities**: Enterprise-grade open billing and payment orchestration platform. Manages complex multi-currency recurring billing, invoice generation, automated payment gateway reconciliation, payment routing, and financial analytics.
 - **Ideal For**: SaaS and platform businesses needing to control end-to-end subscription lifecycle and multi-currency payment reconciliation.
 
-### 9. **[Frappe Books](https://github.com/frappe/books)** [![GitHub stars](https://img.shields.io/github/stars/frappe/books?style=social&color=white)](https://github.com/frappe/books/stargazers)
+### 9. **[Frappe Books](https://github.com/frappe/books)** [![GitHub_Stars](https://img.shields.io/github/stars/frappe/books?style=social&color=white)](https://github.com/frappe/books/stargazers)
 - **Primary Language**: JavaScript / Vue.js / Electron | **License**: AGPL-3.0
 - **Capabilities**: Free, privacy-first desktop double-entry bookkeeping application. Stores data locally in SQLite, handles multi-currency invoicing, tracks journal entries, and produces instantaneous P&L and balance sheet reports without internet dependencies.
 - **Ideal For**: Small businesses, consultants, and contractors seeking a modern, offline-first native accounting GUI.
 
-### 10. **[hledger](https://github.com/hledgerorg/hledger)** [![GitHub stars](https://img.shields.io/github/stars/hledgerorg/hledger?style=social&color=white)](https://github.com/hledgerorg/hledger/stargazers)
+### 10. **[hledger](https://github.com/hledgerorg/hledger)** [![GitHub_Stars](https://img.shields.io/github/stars/hledgerorg/hledger?style=social&color=white)](https://github.com/hledgerorg/hledger/stargazers)
 - **Primary Language**: Haskell | **License**: GPL-3.0
 - **Capabilities**: Robust, cross-platform plain-text accounting software with comprehensive multi-currency support. Features automated CSV/OFX/QIF bank statement import rules, transaction assertions, a built-in terminal UI (`hledger-ui`), and a lightweight web dashboard (`hledger-web`).
 - **Ideal For**: Financial analysts and developers seeking deterministic ledger reconciliation with strict type-safety guarantees.
 
-### 11. **[GnuCash](https://github.com/Gnucash/gnucash)** [![GitHub stars](https://img.shields.io/github/stars/Gnucash/gnucash?style=social&color=white)](https://github.com/Gnucash/gnucash/stargazers)
+### 11. **[GnuCash](https://github.com/Gnucash/gnucash)** [![GitHub_Stars](https://img.shields.io/github/stars/Gnucash/gnucash?style=social&color=white)](https://github.com/Gnucash/gnucash/stargazers)
 - **Primary Language**: C / C++ / Scheme | **License**: GPL-2.0+
 - **Capabilities**: Battle-tested personal and small business double-entry accounting software (maintained since 1999). Supports multi-currency tracking, real-time exchange rate retrieval via Finance::Quote, check printing, scheduled transactions, and OFX/QIF bank reconciliation wizards.
 - **Ideal For**: Non-profit organizations, family offices, and SMBs requiring rock-solid desktop accounting.
 
-### 12. **[Bigcapital](https://github.com/bigcapitalhq/bigcapital)** [![GitHub stars](https://img.shields.io/github/stars/bigcapitalhq/bigcapital?style=social&color=white)](https://github.com/bigcapitalhq/bigcapital/stargazers)
+### 12. **[Bigcapital](https://github.com/bigcapitalhq/bigcapital)** [![GitHub_Stars](https://img.shields.io/github/stars/bigcapitalhq/bigcapital?style=social&color=white)](https://github.com/bigcapitalhq/bigcapital/stargazers)
 - **Primary Language**: TypeScript / React / Node.js | **License**: AGPL-3.0
 - **Capabilities**: Modern open-source cloud accounting software built with React and Node.js. Features automated multi-currency accounting, accounts receivable/payable management, double-entry journal entries, and customizable financial statements.
 - **Ideal For**: Modern web engineering teams looking to customize their own cloud-hosted accounting portal.
 
-### 13. **[Transity](https://github.com/ad-si/Transity)** [![GitHub stars](https://img.shields.io/github/stars/ad-si/Transity?style=social&color=white)](https://github.com/ad-si/Transity/stargazers)
+### 13. **[Transity](https://github.com/ad-si/Transity)** [![GitHub_Stars](https://img.shields.io/github/stars/ad-si/Transity?style=social&color=white)](https://github.com/ad-si/Transity/stargazers)
 - **Primary Language**: Rust / Python | **License**: MIT
 - **Capabilities**: Plain-text accounting engine utilizing structured YAML journal files. Includes an AI-powered import pipeline utilizing OpenAI GPT models to parse unstructured bank PDFs, CSVs, and transaction feeds directly into double-entry ledgers.
 - **Ideal For**: Developers experimenting with LLM-assisted transaction categorization within plain-text ledgers.
 
-### 14. **[LedgerSMB](https://github.com/ledgersmb/LedgerSMB)** [![GitHub stars](https://img.shields.io/github/stars/ledgersmb/LedgerSMB?style=social&color=white)](https://github.com/ledgersmb/LedgerSMB/stargazers)
+### 14. **[LedgerSMB](https://github.com/ledgersmb/LedgerSMB)** [![GitHub_Stars](https://img.shields.io/github/stars/ledgersmb/LedgerSMB?style=social&color=white)](https://github.com/ledgersmb/LedgerSMB/stargazers)
 - **Primary Language**: Perl / SQL (PostgreSQL) | **License**: GPL-2.0
 - **Capabilities**: Scalable double-entry ERP and accounting system running on PostgreSQL. Provides native multi-currency accounting, inventory management, quotation-to-invoice workflows, and multi-branch GL management.
 - **Ideal For**: Small-to-medium manufacturing and wholesale distribution businesses requiring relational integrity.
 
-### 15. **[Reckon](https://github.com/cantino/reckon)** [![GitHub stars](https://img.shields.io/github/stars/cantino/reckon?style=social&color=white)](https://github.com/cantino/reckon/stargazers)
+### 15. **[Reckon](https://github.com/cantino/reckon)** [![GitHub_Stars](https://img.shields.io/github/stars/cantino/reckon?style=social&color=white)](https://github.com/cantino/reckon/stargazers)
 - **Primary Language**: Ruby | **License**: MIT
 - **Capabilities**: Command-line utility that intelligently converts bank CSV exports into Ledger files using Bayesian machine learning. Learns from historical accounting files to auto-assign accounts, tags, and multi-currency notations (`-c`).
 - **Ideal For**: Automating bank feed imports into plain-text ledgers (Ledger, hledger, Beancount).
@@ -203,7 +203,7 @@ Contributions from finance teams, CPAs, and open-source developers are welcome!
 2. Create a feature branch: `git checkout -b feat/add-new-tool`
 3. Add your tool to `README.md` following the established format:
    - For SaaS: Include name, company size, starting price, exact free trial terms, and multi-currency capabilities.
-   - For Open-Source: Include GitHub star badge (`style=social&color=white`), license, languages, and technical description.
+   - For Open-Source: Include GitHub Stars_Badge (`style=social&color=white`), license, languages, and technical description.
 4. Submit a Pull Request with a clear summary of why the tool qualifies.
 
 ---
